@@ -1,1 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #111;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  border-bottom: 1px solid #eee;
+  z-index: 100;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+  list-style: none;
+}
+.modal-content button {
+  background: #bbb;
+  color: white;
+  border: none;
+  cursor: not-allowed;
+  transition: background 0.3s ease;
+}
+
+.modal-content button.enabled {
+  background: #111;
+  cursor: pointer;
+}
+
+.modal-content button.enabled:hover {
+  background: #000;
+}
+
+
+.nav-link {
+  text-decoration: none;
+  color: #111;
+  font-weight: 400;
+}
+
+.nav-link.active {
+  font-weight: 600;
+  border-bottom: 2px solid #111;
+  padding-bottom: 4px;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: url("images/bandeau.jpg") center/cover no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+
+.hero h1 {
+  position: relative;
+  color: white;
+  font-size: 72px;
+  letter-spacing: 8px;
+}
+
+/* SECTIONS */
+.section {
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 36px;
+  margin-bottom: 60px;
+}
+
+.dark {
+  background: #111;
+  color: white;
+}
+
+/* CARDS */
+.cards {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.card {
+  border: 1px solid #eee;
+  padding: 30px;
+}
+
+.dark .card {
+  border-color: #333;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.amount {
+  font-size: 32px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  font-size: 14px;
+  border-top: 1px solid #eee;
+}
+
+/* SCROLL FADE */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.section-anchor {
+  scroll-margin-top: 100px;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 999;
+}
+
+.modal-content {
+  background: white;
+  max-width: 400px;
+  margin: 10% auto;
+  padding: 30px;
+  position: relative;
+  text-align: center;
+}
+
+.modal-content input,
+.modal-content button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 22px;
+}
+.card.price {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card.price:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+.modal-content select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  font-family: 'Poppins', sans-serif;
+  border: 1px solid #ccc;
+}
+.modal-content.success {
+  text-align: center;
+}
+
+.modal-content.success h2 {
+  color: #111;
+  margin-bottom: 15px;
+}
+
+.modal-content.success button {
+  background: #111;
+  color: white;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.no-js .reveal {
+  opacity: 1;
+  transform: none;
+}
