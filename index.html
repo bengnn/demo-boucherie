@@ -1,1 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Boucherie</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav class="navbar">
+  <ul>
+    <li><a href="#home" class="nav-link active">Accueil</a></li>
+    <li><a href="#services" class="nav-link">Produits</a></li>
+    <li><a href="#booking" class="nav-link">Commandes</a></li>
+  </ul>
+</nav>
+
+<!-- HERO / ACCUEIL -->
+<section id="home" class="hero section-anchor">
+  <div class="overlay"></div>
+  <h1>BOUCHERIE</h1>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section section-anchor reveal">
+  <h2>Nos produits</h2>
+
+  <div class="cards">
+    <div class="card">
+      <img src="images/coupe.jpg" alt="">
+      <h3>Boeufs</h3>
+      <p>Des pièces de choix, uniquement d'élevages bovin locaux. </p>
+    </div>
+
+    <div class="card">
+      <img src="images/barbe.jpg" alt="">
+      <h3>Porc</h3>
+      <p>Tou est bon dans le cochon !</p>
+    </div>
+
+    <div class="card">
+      <img src="images/barbe_coupe.jpg" alt="">
+      <h3>Agneau</h3>
+      <p>J'ai plus d'inspi.</p>
+    </div>
+    
+    <div class="card">
+      <img src="images/barbe_coupe.jpg" alt="">
+      <h3>Poulet</h3>
+      <p>AAH LE POULET VRMT LA.</p>
+    </div>
+    
+  </div>
+</section>
+
+<!-- TARIFS & RDV -->
+<section id="booking" class="section section-anchor dark reveal">
+  <h2>Commandes</h2>
+  <p>Choisissez votre morceau préféré parmis notre large séléction</p>
+
+  <div class="cards">
+    <div class="card price" data-service="Coupe">
+      <h3>Boeuf</h3>
+    </div>
+
+    <div class="card price" data-service="Barbe">
+      <h3>Porc</h3>
+    </div>
+
+    <div class="card price" data-service="Coupe + Barbe">
+      <h3>Agneau</h3>
+    </div>
+
+    <div class="card price" data-service="Coupe + Barbe">
+      <h3>Poulet</h3>
+    </div>
+  </div>
+
+  <p class="note">
+    Prise de rendez-vous en ligne ou par téléphone au 06XXXXXXXX.
+  </p>
+</section>
+
+<footer>
+  © 2025 Barbershop
+</footer>
+
+<script src="script.js"></script>
+
+<!--
+
+<div id="bookingModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+
+    <h2>Prendre rendez-vous</h2>
+
+    <form id="bookingForm">
+      <input type="text" placeholder="Nom" required>
+      <input type="tel" placeholder="Téléphone" required>
+
+      <label>Service</label>
+      <input type="text" id="selectedService" readonly>
+
+      <label>Date</label>
+      <input type="date" required>
+
+      <label>Heure</label>
+      <select id="timeSelect" required>
+      <option value="">Choisir une heure</option>
+      <option>09:00</option>
+      <option>09:30</option>
+      <option>10:00</option>
+      <option>10:30</option>
+      <option>11:00</option>
+      <option>11:30</option>
+      <option>14:00</option>
+      <option>14:30</option>
+      <option>15:00</option>
+      <option>15:30</option>
+      <option>16:00</option>
+      <option>16:30</option>
+      <option>17:00</option>
+      <option>17:30</option>
+      </select>
+
+      <button type="submit" id="confirmBtn" disabled>Confirmer</button>
+    </form>
+  </div>
+</div>
+<div id="successModal" class="modal">
+  <div class="modal-content success">
+    <h2>✔ Rendez-vous confirmé</h2>
+    <button id="closeSuccess">Fermer</button>
+  </div>
+</div>
+
+-->
+  
+</body>
+</html>
 
