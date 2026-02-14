@@ -45,7 +45,7 @@ reveals.forEach(el => {
 });
 
 
-  /* ===== OUVERTURE MODAL ===== */
+  /* ===== OUVERTURE MODAL ===== 
   document.querySelectorAll(".card.price").forEach(card => {
     card.addEventListener("click", () => {
 
@@ -58,14 +58,14 @@ reveals.forEach(el => {
     });
   });
 
-  /* ===== FERMETURE MODAL ===== */
+  /* ===== FERMETURE MODAL ===== 
   closeBtn.addEventListener("click", () => modal.style.display = "none");
 
   window.addEventListener("click", e => {
     if (e.target === modal) modal.style.display = "none";
   });
 
-  /* ===== VALIDATION FORM ===== */
+  /* ===== VALIDATION FORM ===== 
   function checkForm() {
     const fields = form.querySelectorAll("input, select");
     let allFilled = true;
@@ -83,12 +83,12 @@ reveals.forEach(el => {
     field.addEventListener("change", checkForm);
   });
 
-  /* ===== FERMETURE AUTO CALENDRIER ===== */
+  /* ===== FERMETURE AUTO CALENDRIER ===== 
   dateInput.addEventListener("change", () => {
     dateInput.blur();
   });
 
-  /* ===== SUBMIT ===== */
+  /* ===== SUBMIT ===== 
   form.addEventListener("submit", e => {
     e.preventDefault();
     modal.style.display = "none";
@@ -98,6 +98,6 @@ reveals.forEach(el => {
   closeSuccess.addEventListener("click", () => {
     successModal.style.display = "none";
   });
-
+*/
 });
 
