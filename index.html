@@ -93,55 +93,75 @@
 
 <script src="script.js"></script>
 
-<!--
-
-<div id="bookingModal" class="modal">
+<div id="orderModal" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
 
-    <h2>Prendre rendez-vous</h2>
+    <h2 id="modalTitle">Commander</h2>
+    
+    <div class="order-step selection-step">
+      <h3>1. Choisissez votre morceau</h3>
+      
+      <label for="cutSelect">Morceau disponible :</label>
+      <select id="cutSelect">
+        </select>
+      
+      <p id="priceDisplay" class="price-tag">-- € / kg</p>
 
-    <form id="bookingForm">
-      <input type="text" placeholder="Nom" required>
-      <input type="tel" placeholder="Téléphone" required>
+      <div class="quantity-group">
+        <div>
+          <label for="quantityInput">Poids (kg) ou Quantité :</label>
+          <input type="number" id="quantityInput" step="0.1" min="0.1" placeholder="Ex: 0.5">
+        </div>
+        
+        <div>
+          <label for="prepInput">Découpe / Note :</label>
+          <input type="text" id="prepInput" placeholder="Ex: En tranches fines, désossé...">
+        </div>
+      </div>
 
-      <label>Service</label>
-      <input type="text" id="selectedService" readonly>
+      <button id="addToCartBtn" class="btn-primary">Ajouter au panier</button>
+    </div>
 
-      <label>Date</label>
-      <input type="date" required>
+    <hr>
 
-      <label>Heure</label>
-      <select id="timeSelect" required>
-      <option value="">Choisir une heure</option>
-      <option>09:00</option>
-      <option>09:30</option>
-      <option>10:00</option>
-      <option>10:30</option>
-      <option>11:00</option>
-      <option>11:30</option>
-      <option>14:00</option>
-      <option>14:30</option>
-      <option>15:00</option>
-      <option>15:30</option>
-      <option>16:00</option>
-      <option>16:30</option>
-      <option>17:00</option>
-      <option>17:30</option>
-      </select>
+    <div class="order-step cart-step">
+      <h3>2. Votre Panier</h3>
+      <ul id="cartList">
+        <li class="empty-cart">Votre panier est vide</li>
+      </ul>
+      
+      <div class="cart-total">
+        <span>Total estimé :</span>
+        <span id="totalPrice">0.00 €</span>
+      </div>
+    </div>
 
-      <button type="submit" id="confirmBtn" disabled>Confirmer</button>
+    <hr>
+
+    <form id="finalOrderForm">
+      <h3>3. Coordonnées & Retrait</h3>
+      <div class="form-row">
+        <input type="text" id="clientName" placeholder="Votre Nom" required>
+        <input type="tel" id="clientPhone" placeholder="Téléphone" required>
+      </div>
+      
+      <label>Date de retrait souhaitée :</label>
+      <input type="date" id="pickupDate" required>
+
+      <button type="submit" class="btn-success">Valider la commande</button>
     </form>
+
   </div>
 </div>
+
 <div id="successModal" class="modal">
-  <div class="modal-content success">
-    <h2>✔ Rendez-vous confirmé</h2>
+  <div class="modal-content success-box">
+    <h2>✔ Commande reçue !</h2>
+    <p>Merci pour votre confiance. Nous vous appellerons pour confirmer.</p>
     <button id="closeSuccess">Fermer</button>
   </div>
 </div>
-
--->
   
 </body>
 </html>
