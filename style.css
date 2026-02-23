@@ -184,10 +184,12 @@ footer {
 }
 
 h3 {
+.modal-content h3 {
   font-size: 18px;
   margin-bottom: 15px;
-  color: #c0392b; /* Rouge viande */
+  color: #c0392b; 
   text-transform: uppercase;
+}
 }
 
 hr {
