@@ -275,3 +275,15 @@ button {
 }
 
 .success-box { text-align: center; }
+/* --- ANIMATION DES CARTES COMMANDES --- */
+.card.price {
+  cursor: pointer; /* Affiche la petite main au survol */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Ce qui se passe quand on passe la souris dessus */
+.card.price:hover {
+  transform: scale(1.05); /* Fait grossir la case de 5% */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15); /* Ajoute une belle ombre */
+  border-color: #c0392b; /* Optionnel : la bordure devient rouge pour rappeler la boucherie */
+}
