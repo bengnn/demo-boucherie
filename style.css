@@ -153,73 +153,123 @@ footer {
   scroll-margin-top: 100px;
 }
 
-/* MODAL 
+/* --- STYLE DU MODAL COMMANDE --- */
 .modal {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.7);
-  z-index: 999;
+  background: rgba(0,0,0,0.6);
+  z-index: 1000;
+  overflow-y: auto; /* Permet de scroller si le panier est long */
 }
 
 .modal-content {
   background: white;
-  max-width: 400px;
-  margin: 10% auto;
+  width: 90%;
+  max-width: 500px;
+  margin: 50px auto;
   padding: 30px;
+  border-radius: 8px;
   position: relative;
-  text-align: center;
-}
-
-.modal-content input,
-.modal-content button {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
+  font-family: 'Poppins', sans-serif;
 }
 
 .close {
   position: absolute;
   top: 15px;
   right: 20px;
+  font-size: 28px;
   cursor: pointer;
-  font-size: 22px;
-}
-.card.price {
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #333;
 }
 
-.card.price:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #c0392b; /* Rouge viande */
+  text-transform: uppercase;
 }
-.modal-content select {
+
+hr {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 20px 0;
+}
+
+/* Inputs & Selects */
+select, input {
   width: 100%;
   padding: 10px;
-  margin: 10px 0;
-  font-family: 'Poppins', sans-serif;
-  border: 1px solid #ccc;
-}
-.modal-content.success {
-  text-align: center;
-}
-
-.modal-content.success h2 {
-  color: #111;
   margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
 }
 
-.modal-content.success button {
-  background: #111;
-  color: white;
-  border: none;
+.price-tag {
+  font-weight: bold;
+  color: #111;
+  text-align: right;
+  margin-top: -10px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+/* Boutons */
+button {
+  width: 100%;
   padding: 12px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
   cursor: pointer;
-  margin-top: 20px;
+  transition: 0.3s;
 }
-.no-js .reveal {
-  opacity: 1;
-  transform: none;
+
+.btn-primary {
+  background: #333;
+  color: white;
 }
-*/
+.btn-primary:hover { background: #000; }
+
+.btn-success {
+  background: #27ae60;
+  color: white;
+  margin-top: 10px;
+}
+.btn-success:hover { background: #219150; }
+
+/* Panier */
+#cartList {
+  list-style: none;
+  margin-bottom: 15px;
+  border: 1px solid #f9f9f9;
+  padding: 10px;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+#cartList li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+.item-remove {
+  color: red;
+  cursor: pointer;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: bold;
+  color: #111;
+}
+
+.success-box { text-align: center; }
