@@ -287,3 +287,13 @@ button {
   box-shadow: 0 10px 20px rgba(0,0,0,0.15); /* Ajoute une belle ombre */
   border-color: #c0392b; /* Optionnel : la bordure devient rouge pour rappeler la boucherie */
 }
+/* --- ADAPTATION POUR MOBILE (RESPONSIVE) --- */
+@media screen and (max-width: 768px) {
+  /* On cible le titre principal sur les petits écrans */
+  .hero h1 {
+    font-size: 40px; /* On réduit drastiquement la taille */
+    letter-spacing: 4px; /* On réduit l'espacement entre les lettres */
+    text-align: center; /* On s'assure qu'il est bien centré */
+    padding: 0 20px; /* On ajoute une petite marge de sécurité sur les bords */
+  }
+}
